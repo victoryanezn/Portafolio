@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Updated global styles for a professional design */
+
+/* Define a modern color palette */
+:root {
+  --primary-color: #1a73e8; /* Blue */
+  --secondary-color: #ff5722; /* Orange */
+  --background-color: #f9f9f9; /* Light Gray */
+  --text-color: #333333; /* Dark Gray */
+  --muted-text-color: #666666; /* Muted Gray */
+  --card-background: #ffffff; /* White */
+  --border-color: #e0e0e0; /* Light Border */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --muted: #6b7280;
+    --accent: #1e40af;
+    --card: #ffffff;
+  }
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility-ish small components to keep markup clean */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.muted { color: var(--muted); }
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.link-accent { color: var(--accent); }
+
+/* Responsive container used in page */
+.app-container { max-width: 1100px; margin: 0 auto; }
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  margin: 0 0 16px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+/* Grid layout improvements */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+/* Style buttons */
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
